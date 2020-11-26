@@ -32,7 +32,7 @@ void delay_ms(unsigned long time)
 		TL0=(65535 - 333)%256;
 		TH0=(65535 - 333)/256;
 		TR0=1; 
-		while(TF0==0);
+		while(TF0==0); 
 		TR0=0;
 		TF0=0;
 		time--;
