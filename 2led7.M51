@@ -1,21 +1,21 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        11/26/2020  00:10:42  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        11/26/2020  09:19:48  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
-C:\KEIL\C51\BIN\BL51.EXE STARTUP.obj, 2led7.obj TO 2led7
+C:\KEIL\C51\BIN\BL51.EXE 2led7.obj TO 2led7
 
 
 MEMORY MODEL: SMALL
 
 
 INPUT MODULES INCLUDED:
-  STARTUP.obj (?C_STARTUP)
   2led7.obj (2LED7)
-  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
   C:\KEIL\C51\LIB\C51S.LIB (?C?ULCMP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
 
 
-LINK MAP OF MODULE:  2led7 (?C_STARTUP)
+LINK MAP OF MODULE:  2led7 (2LED7)
 
 
             TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
@@ -31,13 +31,13 @@ LINK MAP OF MODULE:  2led7 (?C_STARTUP)
             CODE    0000H     0003H     ABSOLUTE     
             CODE    0003H     008CH     UNIT         ?C_C51STARTUP
             CODE    008FH     0048H     UNIT         ?PR?_DELAY_MS?2LED7
-            CODE    00D7H     0026H     UNIT         ?PR?MAIN?2LED7
-            CODE    00FDH     0011H     UNIT         ?C?LIB_CODE
-            CODE    010EH     000DH     UNIT         ?C_INITSEG
+            CODE    00D7H     0011H     UNIT         ?PR?MAIN?2LED7
+            CODE    00E8H     0011H     UNIT         ?C?LIB_CODE
+            CODE    00F9H     000DH     UNIT         ?C_INITSEG
 
 
 
-OVERLAY MAP OF MODULE:   2led7 (?C_STARTUP)
+OVERLAY MAP OF MODULE:   2led7 (2LED7)
 
 
 SEGMENT                          DATA_GROUP 
@@ -54,54 +54,17 @@ SEGMENT                          DATA_GROUP
 
 
 
-SYMBOL TABLE OF MODULE:  2led7 (?C_STARTUP)
+SYMBOL TABLE OF MODULE:  2led7 (2LED7)
 
   VALUE           TYPE          NAME
   ----------------------------------
 
-BL51 BANKED LINKER/LOCATER V6.22                                                      11/26/2020  00:10:42  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/26/2020  09:19:48  PAGE 2
 
-
-  -------         MODULE        ?C_STARTUP
-  C:0003H         SEGMENT       ?C_C51STARTUP
-  I:0016H         SEGMENT       ?STACK
-  C:0000H         PUBLIC        ?C_STARTUP
-  D:00E0H         SYMBOL        ACC
-  D:00F0H         SYMBOL        B
-  D:0083H         SYMBOL        DPH
-  D:0082H         SYMBOL        DPL
-  N:0000H         SYMBOL        IBPSTACK
-  N:0100H         SYMBOL        IBPSTACKTOP
-  N:0080H         SYMBOL        IDATALEN
-  C:0006H         SYMBOL        IDATALOOP
-  N:0000H         SYMBOL        PBPSTACK
-  N:0100H         SYMBOL        PBPSTACKTOP
-  N:0000H         SYMBOL        PDATALEN
-  N:0000H         SYMBOL        PDATASTART
-  N:0000H         SYMBOL        PPAGE
-  N:0000H         SYMBOL        PPAGEENABLE
-  D:00A0H         SYMBOL        PPAGE_SFR
-  D:0081H         SYMBOL        SP
-  C:0003H         SYMBOL        STARTUP1
-  N:0000H         SYMBOL        XBPSTACK
-  N:0000H         SYMBOL        XBPSTACKTOP
-  N:0000H         SYMBOL        XDATALEN
-  N:0000H         SYMBOL        XDATASTART
-  C:0000H         LINE#         126
-  C:0003H         LINE#         133
-  C:0005H         LINE#         134
-  C:0006H         LINE#         135
-  C:0007H         LINE#         136
-  C:0009H         LINE#         185
-  C:000CH         LINE#         196
-  -------         ENDMOD        ?C_STARTUP
 
   -------         MODULE        2LED7
   C:0000H         SYMBOL        _ICE_DUMMY_
-  D:0090H         PUBLIC        P1
-  D:00A0H         PUBLIC        P2
-  B:00B0H.0       PUBLIC        P3_0
-  B:00B0H.1       PUBLIC        P3_1
+  B:00A0H.0       PUBLIC        P2_0
   C:00D7H         PUBLIC        main
   D:0089H         PUBLIC        TMOD
   B:0088H.5       PUBLIC        TF0
@@ -114,43 +77,34 @@ SYMBOL TABLE OF MODULE:  2led7 (?C_STARTUP)
   C:00D7H         LINE#         9
   C:00D7H         LINE#         10
   C:00D7H         LINE#         11
-  C:00D7H         LINE#         12
-  C:00D7H         LINE#         13
-  C:00DAH         LINE#         14
-  C:00DCH         LINE#         15
-  C:00DEH         LINE#         16
-BL51 BANKED LINKER/LOCATER V6.22                                                      11/26/2020  00:10:42  PAGE 3
-
-
-  C:00E1H         LINE#         17
-  C:00E9H         LINE#         18
-  C:00EBH         LINE#         19
-  C:00EDH         LINE#         20
-  C:00F0H         LINE#         21
-  C:00FBH         LINE#         22
+  C:00D9H         LINE#         12
+  C:00D9H         LINE#         13
+  C:00D9H         LINE#         14
+  C:00DBH         LINE#         15
+  C:00E6H         LINE#         25
   -------         ENDPROC       MAIN
   -------         PROC          _DELAY_MS
   D:0012H         SYMBOL        time
-  C:008FH         LINE#         24
-  C:0097H         LINE#         25
-  C:0097H         LINE#         26
-  C:009AH         LINE#         27
-  C:00ADH         LINE#         28
-  C:00ADH         LINE#         29
-  C:00B0H         LINE#         30
-  C:00B3H         LINE#         31
-  C:00B5H         LINE#         32
-  C:00B8H         LINE#         33
-  C:00BAH         LINE#         34
-  C:00BCH         LINE#         35
-  C:00D4H         LINE#         36
-  C:00D6H         LINE#         37
+  C:008FH         LINE#         27
+  C:0097H         LINE#         28
+  C:0097H         LINE#         29
+  C:009AH         LINE#         30
+  C:00ADH         LINE#         31
+  C:00ADH         LINE#         32
+  C:00B0H         LINE#         33
+  C:00B3H         LINE#         34
+  C:00B5H         LINE#         35
+  C:00B8H         LINE#         36
+  C:00BAH         LINE#         37
+  C:00BCH         LINE#         38
+  C:00D4H         LINE#         39
+  C:00D6H         LINE#         40
   -------         ENDPROC       _DELAY_MS
   -------         ENDMOD        2LED7
 
   -------         MODULE        ?C?ULCMP
-  C:00FDH         PUBLIC        ?C?ULCMP
+  C:00E8H         PUBLIC        ?C?ULCMP
   -------         ENDMOD        ?C?ULCMP
 
-Program Size: data=23.0 xdata=0 code=283
+Program Size: data=23.0 xdata=0 code=262
 LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
